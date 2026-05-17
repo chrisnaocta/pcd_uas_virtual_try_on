@@ -342,7 +342,7 @@ with tab1:
         st.warning("Silakan unggah foto baju terlebih dahulu.")
 
 # ------------------------------------------------------------------------------
-# TAB 2: PARSE KEYPOINTS ORANG
+# TAB 2: Ekstraksi Koordinat Tubuh dari OpenPose JSON
 # ------------------------------------------------------------------------------
 with tab2:
     st.header("Langkah 2 — Deteksi Pose Manusia")
@@ -455,7 +455,9 @@ with tab2:
                 st.image(overlay,
                          caption="③ Raw Keypoints dari JSON",
                          use_container_width=True)
-
+            # Menampilkan koordinat log
+            with st.expander("Lihat Koordinat Keypoints Mentah"):
+                st.json(raw_pts)
     else:
         st.warning("Silakan unggah Foto Orang dan File OpenPose JSON.")
 
