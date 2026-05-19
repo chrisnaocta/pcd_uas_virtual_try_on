@@ -182,7 +182,7 @@ def parse_keypoints_from_json(json_data):
         # Setiap titik = 3 elemen: [x, y, confidence] → idx*3 s.d. idx*3+2
         x, y, conf = kps[idx * 3], kps[idx * 3 + 1], kps[idx * 3 + 2]
         # Hanya kembalikan koordinat jika confidence cukup tinggi (> 0.1)
-        return (int(x), int(y)) if conf > 0.1 else None
+        return (round(x), round(y)) if conf > 0.1 else None
 
     # Buat dictionary semua titik: {nama: (x,y) atau None}
     raw = {name: get_pt(idx) for name, idx in KP_IDX.items()}
