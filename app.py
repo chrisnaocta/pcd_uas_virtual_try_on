@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import streamlit as st
 from PIL import Image
+# Catatan: pastikan semua library di atas sudah terinstall di environment Python Anda.
 
 # ==============================================================================
 # KONFIGURASI HALAMAN STREAMLIT
